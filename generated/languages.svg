@@ -132,7 +132,7 @@ div.ellipsis {
 
 <div>
 <span class="progress">
-<span style="background-color: #3572A5;width: 92.199%;" class="progress-item"></span><span style="background-color: #3ac486;width: 2.941%;" class="progress-item"></span><span style="background-color: #555555;width: 1.272%;" class="progress-item"></span><span style="background-color: #198CE7;width: 0.797%;" class="progress-item"></span><span style="background-color: #0298c3;width: 0.783%;" class="progress-item"></span><span style="background-color: #f1e05a;width: 0.593%;" class="progress-item"></span><span style="background-color: #355570;width: 0.314%;" class="progress-item"></span><span style="background-color: #f34b7d;width: 0.231%;" class="progress-item"></span><span style="background-color: #e34c26;width: 0.208%;" class="progress-item"></span><span style="background-color: #A97BFF;width: 0.145%;" class="progress-item"></span><span style="background-color: #DA5B0B;width: 0.127%;" class="progress-item"></span><span style="background-color: #3D6117;width: 0.121%;" class="progress-item"></span><span style="background-color: #89e051;width: 0.118%;" class="progress-item"></span><span style="background-color: #663399;width: 0.101%;" class="progress-item"></span><span style="background-color: #4d41b1;width: 0.022%;" class="progress-item"></span><span style="background-color: #4298b8;width: 0.015%;" class="progress-item"></span><span style="background-color: #384d54;width: 0.011%;" class="progress-item"></span><span style="background-color: #DA3434;width: 0.001%;" class="progress-item"></span><span style="background-color: #a52a22;width: 0.001%;" class="progress-item"></span>
+<span style="background-color: #3572A5;width: 92.196%;" class="progress-item"></span><span style="background-color: #3ac486;width: 2.941%;" class="progress-item"></span><span style="background-color: #555555;width: 1.272%;" class="progress-item"></span><span style="background-color: #198CE7;width: 0.797%;" class="progress-item"></span><span style="background-color: #0298c3;width: 0.783%;" class="progress-item"></span><span style="background-color: #f1e05a;width: 0.593%;" class="progress-item"></span><span style="background-color: #355570;width: 0.314%;" class="progress-item"></span><span style="background-color: #f34b7d;width: 0.231%;" class="progress-item"></span><span style="background-color: #e34c26;width: 0.208%;" class="progress-item"></span><span style="background-color: #A97BFF;width: 0.145%;" class="progress-item"></span><span style="background-color: #DA5B0B;width: 0.127%;" class="progress-item"></span><span style="background-color: #89e051;width: 0.121%;" class="progress-item"></span><span style="background-color: #3D6117;width: 0.121%;" class="progress-item"></span><span style="background-color: #663399;width: 0.101%;" class="progress-item"></span><span style="background-color: #4d41b1;width: 0.022%;" class="progress-item"></span><span style="background-color: #4298b8;width: 0.015%;" class="progress-item"></span><span style="background-color: #384d54;width: 0.011%;" class="progress-item"></span><span style="background-color: #DA3434;width: 0.001%;" class="progress-item"></span><span style="background-color: #a52a22;width: 0.001%;" class="progress-item"></span>
 </span>
 </div>
 
@@ -239,19 +239,19 @@ fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
 
 
 <li style="animation-delay: 1650ms;">
-<svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#3D6117;"
+<svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#89e051;"
 viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
 fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
-<span class="lang">TeX</span>
+<span class="lang">Shell</span>
 <span class="percent">0.12%</span>
 </li>
 
 
 <li style="animation-delay: 1800ms;">
-<svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#89e051;"
+<svg xmlns="http://www.w3.org/2000/svg" class="octicon" style="fill:#3D6117;"
 viewBox="0 0 16 16" version="1.1" width="16" height="16"><path
 fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path></svg>
-<span class="lang">Shell</span>
+<span class="lang">TeX</span>
 <span class="percent">0.12%</span>
 </li>
 
