@@ -18,3 +18,10 @@
     <img src="generated/languages-light.svg" alt="Top Languages">
   </picture>
 </p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="generated/activity-dark.svg">
+    <img src="generated/activity-light.svg" alt="Activity Graph">
+  </picture>
+</p>
