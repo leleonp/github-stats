@@ -27,7 +27,7 @@ jobs:
     - name: Generate Trophies (Light)
       uses: soulteary/github-profile-trophy-action@v1
       with:
-        options: 'username=${{ github.repository_owner }}&theme=flat&column=7&margin-w=15&margin-h=15'
+        options: 'username=${{ github.repository_owner }}&theme=onedark&column=7&margin-w=15&margin-h=15'
         path: generated/trophies-light.svg
         token: ${{ secrets.ACCESS_TOKEN }}
 
@@ -43,7 +43,7 @@ jobs:
       uses: readme-tools/github-readme-stats-action@v1
       with:
         card: stats
-        options: username=${{ github.repository_owner }}&show_icons=true&theme=flat
+        options: username=${{ github.repository_owner }}&show_icons=true&theme=onedark
         path: generated/overview-light.svg
         token: ${{ secrets.ACCESS_TOKEN }}
 
@@ -59,20 +59,20 @@ jobs:
       uses: readme-tools/github-readme-stats-action@v1
       with:
         card: top-langs
-        options: username=${{ github.repository_owner }}&layout=compact&theme=flat
+        options: username=${{ github.repository_owner }}&layout=compact&theme=onedark
         path: generated/languages-light.svg
         token: ${{ secrets.ACCESS_TOKEN }}
 
     - name: Generate Activity Graph (Dark)
-      run: curl -s "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=dark-plus&area=true" -o generated/activity-dark.svg
+      run: curl -s "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=dracula&area=true" -o generated/activity-dark.svg
 
     - name: Generate Activity Graph (Light)
-      run: curl -s "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=default&area=true" -o generated/activity-light.svg
+      run: curl -s "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=dracula&area=true" -o generated/activity-light.svg
 
     - name: Commit to the repo
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git add generated/*.svg
-        git commit -m 'Update generated files (stats and trophies)' || true
+        git commit -m 'Update generated files (unified onedark/dracula theme)' || true
         git push
