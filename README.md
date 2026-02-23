@@ -4,10 +4,14 @@
 https://github.community/t/support-theme-context-for-images-in-light-vs-dark-mode/147981/84
 -->
 <a href="https://github.com/leleonp/github-stats">
-<img src="https://github.com/leleonp/github-stats/blob/master/generated/overview.svg#gh-dark-mode-only" />
-<img src="https://github.com/leleonp/github-stats/blob/master/generated/languages.svg#gh-dark-mode-only" />
-<img src="https://github.com/leleonp/github-stats/blob/master/generated/overview.svg#gh-light-mode-only" />
-<img src="https://github.com/leleonp/github-stats/blob/master/generated/languages.svg#gh-light-mode-only" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="generated/overview-dark.svg">
+    <img src="generated/overview-light.svg">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="generated/languages-dark.svg">
+    <img src="generated/languages-light.svg">
+  </picture>
 </a>
 
 Generate visualizations of GitHub user and repository statistics with GitHub
@@ -112,12 +116,16 @@ For more information on inaccuracies, see issue
    following lines of code into your markdown content. Change the `username`
    value to your GitHub username.
    ```md
-   ![](https://raw.githubusercontent.com/username/github-stats/master/generated/overview.svg#gh-dark-mode-only)
-   ![](https://raw.githubusercontent.com/username/github-stats/master/generated/overview.svg#gh-light-mode-only)
+   <picture>
+     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/username/github-stats/master/generated/overview-dark.svg">
+     <img src="https://raw.githubusercontent.com/username/github-stats/master/generated/overview-light.svg">
+   </picture>
    ```
    ```md
-   ![](https://raw.githubusercontent.com/username/github-stats/master/generated/languages.svg#gh-dark-mode-only)
-   ![](https://raw.githubusercontent.com/username/github-stats/master/generated/languages.svg#gh-light-mode-only)
+   <picture>
+     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/username/github-stats/master/generated/languages-dark.svg">
+     <img src="https://raw.githubusercontent.com/username/github-stats/master/generated/languages-light.svg">
+   </picture>
    ```
 9. Link back to this repository so that others can generate their own
    statistics images.
