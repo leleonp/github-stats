@@ -1,7 +1,8 @@
 <p align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=leleonp&theme=onedark" alt="Trophies" />
-  </a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="generated/trophies-dark.svg">
+    <img src="generated/trophies-light.svg" alt="Trophies">
+  </picture>
 </p>
 
 <p align="center">
