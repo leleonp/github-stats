@@ -1,11 +1,3 @@
-<h2 align="center">🏆 GitHub Trophies</h2>
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="generated/trophies-dark.svg">
-    <img src="generated/trophies-light.svg" alt="Trophies">
-  </picture>
-</p>
-
 <h2 align="center">📊 GitHub Statistics</h2>
 <div align="center">
   <table border="0">
@@ -25,6 +17,14 @@
     </tr>
   </table>
 </div>
+
+<h2 align="center">🏆 GitHub Trophies</h2>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="generated/trophies-dark.svg">
+    <img src="generated/trophies-light.svg" alt="Trophies">
+  </picture>
+</p>
 
 <h2 align="center">📈 Activity Graph</h2>
 <p align="center">
