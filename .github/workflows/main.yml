@@ -35,7 +35,7 @@ jobs:
       uses: readme-tools/github-readme-stats-action@v1
       with:
         card: stats
-        options: username=${{ github.repository_owner }}&show_icons=true&theme=dark
+        options: username=${{ github.repository_owner }}&show_icons=true&theme=onedark
         path: generated/overview-dark.svg
         token: ${{ secrets.ACCESS_TOKEN }}
 
@@ -43,7 +43,7 @@ jobs:
       uses: readme-tools/github-readme-stats-action@v1
       with:
         card: stats
-        options: username=${{ github.repository_owner }}&show_icons=true
+        options: username=${{ github.repository_owner }}&show_icons=true&theme=flat
         path: generated/overview-light.svg
         token: ${{ secrets.ACCESS_TOKEN }}
 
@@ -51,7 +51,7 @@ jobs:
       uses: readme-tools/github-readme-stats-action@v1
       with:
         card: top-langs
-        options: username=${{ github.repository_owner }}&layout=compact&theme=dark
+        options: username=${{ github.repository_owner }}&layout=compact&theme=onedark
         path: generated/languages-dark.svg
         token: ${{ secrets.ACCESS_TOKEN }}
 
@@ -59,7 +59,7 @@ jobs:
       uses: readme-tools/github-readme-stats-action@v1
       with:
         card: top-langs
-        options: username=${{ github.repository_owner }}&layout=compact
+        options: username=${{ github.repository_owner }}&layout=compact&theme=flat
         path: generated/languages-light.svg
         token: ${{ secrets.ACCESS_TOKEN }}
 
