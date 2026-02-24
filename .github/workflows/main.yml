@@ -27,7 +27,7 @@ jobs:
     - name: Generate Trophies (Light)
       uses: soulteary/github-profile-trophy-action@v1
       with:
-        options: 'username=${{ github.repository_owner }}&theme=onedark&column=7&margin-w=15&margin-h=15'
+        options: 'username=${{ github.repository_owner }}&theme=flat&column=7&margin-w=15&margin-h=15'
         path: generated/trophies-light.svg
         token: ${{ secrets.ACCESS_TOKEN }}
 
@@ -43,7 +43,7 @@ jobs:
       uses: readme-tools/github-readme-stats-action@v1
       with:
         card: stats
-        options: username=${{ github.repository_owner }}&show_icons=true&theme=onedark
+        options: username=${{ github.repository_owner }}&show_icons=true&theme=default
         path: generated/overview-light.svg
         token: ${{ secrets.ACCESS_TOKEN }}
 
@@ -59,7 +59,7 @@ jobs:
       uses: readme-tools/github-readme-stats-action@v1
       with:
         card: top-langs
-        options: username=${{ github.repository_owner }}&layout=compact&theme=onedark
+        options: username=${{ github.repository_owner }}&layout=compact&theme=default
         path: generated/languages-light.svg
         token: ${{ secrets.ACCESS_TOKEN }}
 
@@ -67,7 +67,7 @@ jobs:
       run: curl -s "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=dracula&area=true" -o generated/activity-dark.svg
 
     - name: Generate Activity Graph (Light)
-      run: curl -s "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=dracula&area=true" -o generated/activity-light.svg
+      run: curl -s "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=github-light&area=true" -o generated/activity-light.svg
 
     - name: Commit to the repo
       run: |
