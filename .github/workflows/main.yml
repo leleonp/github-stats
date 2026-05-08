@@ -15,21 +15,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Generate Trophies (Dark)
       uses: soulteary/github-profile-trophy-action@v1
       with:
         options: 'username=${{ github.repository_owner }}&theme=onedark&column=7&margin-w=15&margin-h=15'
         path: generated/trophies-dark.svg
-        token: ${{ secrets.ACCESS_TOKEN }}
+        token: ${{ github.token }}
 
     - name: Generate Trophies (Light)
       uses: soulteary/github-profile-trophy-action@v1
       with:
         options: 'username=${{ github.repository_owner }}&theme=flat&column=7&margin-w=15&margin-h=15'
         path: generated/trophies-light.svg
-        token: ${{ secrets.ACCESS_TOKEN }}
+        token: ${{ github.token }}
 
     - name: Generate Overview (Dark)
       uses: readme-tools/github-readme-stats-action@v1
@@ -37,7 +37,7 @@ jobs:
         card: stats
         options: username=${{ github.repository_owner }}&show_icons=true&theme=onedark
         path: generated/overview-dark.svg
-        token: ${{ secrets.ACCESS_TOKEN }}
+        token: ${{ github.token }}
 
     - name: Generate Overview (Light)
       uses: readme-tools/github-readme-stats-action@v1
@@ -45,7 +45,7 @@ jobs:
         card: stats
         options: username=${{ github.repository_owner }}&show_icons=true&theme=default
         path: generated/overview-light.svg
-        token: ${{ secrets.ACCESS_TOKEN }}
+        token: ${{ github.token }}
 
     - name: Generate Languages (Dark)
       uses: readme-tools/github-readme-stats-action@v1
@@ -53,7 +53,7 @@ jobs:
         card: top-langs
         options: username=${{ github.repository_owner }}&layout=compact&theme=onedark
         path: generated/languages-dark.svg
-        token: ${{ secrets.ACCESS_TOKEN }}
+        token: ${{ github.token }}
 
     - name: Generate Languages (Light)
       uses: readme-tools/github-readme-stats-action@v1
@@ -61,18 +61,21 @@ jobs:
         card: top-langs
         options: username=${{ github.repository_owner }}&layout=compact&theme=default
         path: generated/languages-light.svg
-        token: ${{ secrets.ACCESS_TOKEN }}
+        token: ${{ github.token }}
 
     - name: Generate Activity Graph (Dark)
-      run: curl -s "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=dracula&area=true" -o generated/activity-dark.svg
+      run: curl -sf "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=dracula&area=true" -o generated/activity-dark.svg
 
     - name: Generate Activity Graph (Light)
-      run: curl -s "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=github-light&area=true" -o generated/activity-light.svg
+      run: curl -sf "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=github-light&area=true" -o generated/activity-light.svg
 
     - name: Commit to the repo
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git add generated/*.svg
-        git commit -m 'Update generated files (unified onedark/dracula theme)' || true
+        if [ -f generated/languages.svg ]; then
+          git rm generated/languages.svg || true
+        fi
+        git commit -m 'Update generated files (Node 24 upgrade)' || echo "No changes to commit"
         git push
