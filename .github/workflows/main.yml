@@ -63,12 +63,6 @@ jobs:
         path: generated/languages-light.svg
         token: ${{ github.token }}
 
-    - name: Generate Activity Graph (Dark)
-      run: curl -sf "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=dracula&area=true" -o generated/activity-dark.svg
-
-    - name: Generate Activity Graph (Light)
-      run: curl -sf "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=github-light&area=true" -o generated/activity-light.svg
-
     - name: Commit to the repo
       run: |
         git config --global user.name "github-actions[bot]"
