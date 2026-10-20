@@ -22,14 +22,16 @@ jobs:
       with:
         options: 'username=${{ github.repository_owner }}&theme=onedark&column=7&margin-w=15&margin-h=15'
         path: generated/trophies-dark.svg
-        token: ${{ github.token }}
+        token: ${{ secrets.ACCESS_TOKEN || github.token }}
+        version: v1.0.0
 
     - name: Generate Trophies (Light)
       uses: soulteary/github-profile-trophy-action@v1
       with:
         options: 'username=${{ github.repository_owner }}&theme=flat&column=7&margin-w=15&margin-h=15'
         path: generated/trophies-light.svg
-        token: ${{ github.token }}
+        token: ${{ secrets.ACCESS_TOKEN || github.token }}
+        version: v1.0.0
 
     - name: Generate Overview (Dark)
       uses: readme-tools/github-readme-stats-action@v1
