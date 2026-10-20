@@ -25,3 +25,11 @@
     <img src="https://raw.githubusercontent.com/leleonp/github-stats/master/generated/trophies-light.svg" alt="Trophies">
   </picture>
 </p>
+
+<h2 align="center">📈 Activity Graph</h2>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/leleonp/github-stats/master/generated/activity-dark.svg">
+    <img src="https://raw.githubusercontent.com/leleonp/github-stats/master/generated/activity-light.svg" alt="Activity Graph">
+  </picture>
+</p>
