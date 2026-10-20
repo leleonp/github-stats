@@ -34,7 +34,7 @@ jobs:
         version: v1.0.0
 
     - name: Generate Overview (Dark)
-      uses: readme-tools/github-readme-stats-action@v1
+      uses: stats-organization/github-readme-stats-action@v2
       with:
         card: stats
         options: username=${{ github.repository_owner }}&show_icons=true&theme=onedark
@@ -42,7 +42,7 @@ jobs:
         token: ${{ github.token }}
 
     - name: Generate Overview (Light)
-      uses: readme-tools/github-readme-stats-action@v1
+      uses: stats-organization/github-readme-stats-action@v2
       with:
         card: stats
         options: username=${{ github.repository_owner }}&show_icons=true&theme=default
@@ -50,7 +50,7 @@ jobs:
         token: ${{ github.token }}
 
     - name: Generate Languages (Dark)
-      uses: readme-tools/github-readme-stats-action@v1
+      uses: stats-organization/github-readme-stats-action@v2
       with:
         card: top-langs
         options: username=${{ github.repository_owner }}&layout=compact&theme=onedark
@@ -58,7 +58,7 @@ jobs:
         token: ${{ github.token }}
 
     - name: Generate Languages (Light)
-      uses: readme-tools/github-readme-stats-action@v1
+      uses: stats-organization/github-readme-stats-action@v2
       with:
         card: top-langs
         options: username=${{ github.repository_owner }}&layout=compact&theme=default
